@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supremo Ouro | Joalheria Premium</title>
+    <meta name="description" content="Supremo Ouro: Elegância e exclusividade em joias de ouro e diamantes. Brilhe com o luxo absoluto.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Boxicons (Icons) -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Supremo <span>Ouro</span></a>
+            <nav class="navbar">
+                <a href="#home" class="nav-link">Início</a>
+                <a href="#collections" class="nav-link">Coleções</a>
+                <a href="#about" class="nav-link">Sobre nós</a>
+                <a href="#contact" class="nav-link">Contato</a>
+            </nav>
+            <div class="nav-icons">
+                <a href="#" class="icon-link"><i class='bx bx-search'></i></a>
+                <a href="#" class="icon-link"><i class='bx bx-shopping-bag'></i></a>
+                <a href="#" class="icon-link social-nav"><i class='bx bxl-instagram'></i></a>
+                <div class="menu-toggle" id="mobile-menu"><i class='bx bx-menu'></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <!-- As this is purely CSS, we'll use a local image as background in the stylesheet -->
+        </div>
+        <div class="container hero-content">
+            <h1 class="hero-title">A Essência do<br><span>Luxo Absoluto</span></h1>
+            <p class="hero-desc">Descubra peças exclusivas esculpidas com a pureza do ouro e o brilho eterno dos diamantes. Reinvente sua elegância.</p>
+            <a href="#collections" class="btn btn-primary">Explorar Coleção <i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="collections section" id="collections">
+        <div class="container">
+            <div class="section-title">
+                <h2>Coleções <span>Destaques</span></h2>
+                <p>Nossas joias mais desejadas, criadas para momentos inesquecíveis.</p>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="assets/ring_gold.png" alt="Anel de Ouro Supreme" class="product-img">
+                        <span class="badge">Novo</span>
+                        <div class="product-actions">
+                            <button class="btn-icon"><i class='bx bx-heart'></i></button>
+                            <button class="btn-icon"><i class='bx bx-shopping-bag'></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Anel Solitário Supreme</h3>
+                        <p class="price">R$ 5.490,00</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="assets/necklace_gold.png" alt="Colar de Ouro com Diamante" class="product-img" id="img-necklace">
+                        <div class="product-actions">
+                            <button class="btn-icon"><i class='bx bx-heart'></i></button>
+                            <button class="btn-icon"><i class='bx bx-shopping-bag'></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Gargantilha Lágrima Dourada</h3>
+                        <p class="price">R$ 8.900,00</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="assets/earrings_gold.png" alt="Brincos de Ouro" class="product-img" id="img-earrings">
+                        <div class="product-actions">
+                            <button class="btn-icon"><i class='bx bx-heart'></i></button>
+                            <button class="btn-icon"><i class='bx bx-shopping-bag'></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Brincos Cascata de Luz</h3>
+                        <p class="price">R$ 4.250,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="center-btn">
+                <a href="#" class="btn btn-outline">Ver Todas as Joias</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Banner Section -->
+    <section class="social-banner section">
+        <div class="container banner-inner">
+            <div class="banner-text">
+                <h2>Faça parte da realeza</h2>
+                <p>Junte-se a milhares de clientes brilhando com Supremo Ouro. Siga-nos no Instagram e acompanhe nossos lançamentos e estilo de vida que você merece.</p>
+                <div class="social-links-large">
+                    <a href="https://instagram.com" target="_blank" class="social-btn"><i class='bx bxl-instagram'></i> @supremo_ouro</a>
+                    <a href="https://wa.me/" target="_blank" class="social-btn"><i class='bx bxl-whatsapp'></i> Fale Conosco</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">Supremo <span>Ouro</span></a>
+                <p class="footer-desc">Redefinindo o padrão de beleza com peças autênticas feitas por artesãos de renome mundial.</p>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                    <a href="#"><i class='bx bxl-pinterest'></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="#">Minha Conta</a></li>
+                    <li><a href="#">Rastrear Pedido</a></li>
+                    <li><a href="#">Garantia da Joia</a></li>
+                    <li><a href="#">Cuidados e Limpeza</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Lojas Físicas</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Serviço</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Receba novidades exclusivas e 10% off na primeira compra.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail" required>
+                    <button type="submit"><i class='bx bx-envelope'></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Supremo Ouro. Todos os direitos reservados. Design e estrutura premium.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
