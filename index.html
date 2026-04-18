@@ -2,6 +2,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script>
+        var pass = prompt("Projeto em Desenvolvimento. Insira a senha de acesso:");
+        if (pass !== "supremo123") {
+            document.write("<div style='background:#111;color:#d4af37;height:100vh;display:flex;align-items:center;justify-content:center;font-family:sans-serif;'><h1>Acesso Restrito</h1></div>");
+            window.stop();
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supremo Ouro | Joalheria Premium</title>
