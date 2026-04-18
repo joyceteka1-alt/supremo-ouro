@@ -58,3 +58,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 console.log('Supremo Ouro Premium Store loaded.');
+
+// WhatsApp Checkout Logic
+const checkoutBtns = document.querySelectorAll('.checkout-btn');
+const whatsappNumber = '5531982522868'; 
+
+checkoutBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        const productName = btn.getAttribute('data-name');
+        const productPrice = btn.getAttribute('data-price');
+        
+        let message = '';
+        if (productPrice) {
+            message = `Olá equipe Supremo Ouro! Tenho interesse em finalizar a compra do produto: *${productName}* no valor de *R$ ${productPrice}*. Podemos seguir com o atendimento?`;
+        } else {
+            message = `Olá equipe Supremo Ouro! Cheguei através da *Sacola do Site* e gostaria de um atendimento para adquirir uma joia.`;
+        }
+
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        
+        window.open(whatsappUrl, '_blank');
+    });
+});
