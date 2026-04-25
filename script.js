@@ -83,3 +83,91 @@ checkoutBtns.forEach(btn => {
         window.open(whatsappUrl, '_blank');
     });
 });
+
+/* =============================================
+   LGPD – Cookie Consent Banner
+============================================= */
+(function () {
+    const CONSENT_KEY = 'supremo_ouro_cookie_consent';
+    const banner = document.getElementById('cookie-banner');
+    const btnAccept = document.getElementById('cookie-accept');
+    const btnReject = document.getElementById('cookie-reject');
+
+    function hideBanner() {
+        banner.classList.remove('is-visible');
+        // Slide back down after transition
+        setTimeout(() => { banner.style.display = 'none'; }, 600);
+    }
+
+    // Show banner only if user hasn't decided yet
+    if (!localStorage.getItem(CONSENT_KEY)) {
+        // Small delay for better UX (page loads first)
+        setTimeout(() => {
+            banner.style.display = '';
+            requestAnimationFrame(() => banner.classList.add('is-visible'));
+        }, 800);
+    } else {
+        banner.style.display = 'none';
+    }
+
+    btnAccept.addEventListener('click', () => {
+        localStorage.setItem(CONSENT_KEY, 'all');
+        hideBanner();
+    });
+
+    btnReject.addEventListener('click', () => {
+        localStorage.setItem(CONSENT_KEY, 'essential');
+        hideBanner();
+    });
+})();
+
+/* =============================================
+   LGPD – Modals (Privacy Policy & Terms)
+============================================= */
+(function () {
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        // Scroll modal body back to top each open
+        const body = modal.querySelector('.lgpd-modal__body');
+        if (body) body.scrollTop = 0;
+    }
+
+    function closeModal(modal) {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+    }
+
+    // Wire up all [data-close-modal] elements inside each modal
+    document.querySelectorAll('.lgpd-modal').forEach(modal => {
+        modal.querySelectorAll('[data-close-modal]').forEach(el => {
+            el.addEventListener('click', () => closeModal(modal));
+        });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.lgpd-modal.is-open').forEach(m => closeModal(m));
+        }
+    });
+
+    // Open triggers — footer bottom links
+    document.getElementById('open-privacy')?.addEventListener('click', (e) => {
+        e.preventDefault(); openModal('modal-privacy');
+    });
+    document.getElementById('open-terms')?.addEventListener('click', (e) => {
+        e.preventDefault(); openModal('modal-terms');
+    });
+
+    // Open triggers — footer nav column links
+    document.getElementById('open-privacy-nav')?.addEventListener('click', (e) => {
+        e.preventDefault(); openModal('modal-privacy');
+    });
+    document.getElementById('open-terms-nav')?.addEventListener('click', (e) => {
+        e.preventDefault(); openModal('modal-terms');
+    });
+})();
+
